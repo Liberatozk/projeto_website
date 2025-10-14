@@ -5,36 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Corinthians - História</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       background-color: #000;
-      color: #fff;
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
     }
+
+    /* Navbar */
+    .navbar {
+      background-color: #000;
+      border-bottom: 2px solid #fff;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-link {
+      color: #f5f5f5 !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #c0c0c0 !important;
+    }
+
+    /* Seções */
+    section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Cards */
     .card {
       background-color: #111;
-      color: #fff;
-      border: 1px solid #fff;
+      border: 1px solid #444;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 10px;
     }
-    .navbar, footer {
-      background-color: #000;
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
     }
-    .nav-link, .navbar-brand {
-      color: #fff !important;
+
+    .card h5 {
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
+
+    /* Galeria */
     .gallery img {
       width: 100%;
-      height: auto;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
       border: 2px solid #fff;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    /* Vídeo */
+    .ratio {
+      border: 3px solid #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #111;
+      border-top: 2px solid #fff;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Corinthians</a>
-      <div class="collapse navbar-collapse">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">Corinthians</a>
+      <button class="navbar-toggler text-white border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="info.html">Mais Informações</a></li>
@@ -44,31 +125,32 @@
   </nav>
 
   <!-- História -->
-  <section class="container py-5">
-    <h1 class="text-center">História do Corinthians</h1>
-    <p class="lead text-center">
-      Fundado em 1º de setembro de 1910, o Sport Club Corinthians Paulista é um dos clubes mais populares e vitoriosos do Brasil. Com uma torcida apaixonada, o Timão conquistou títulos nacionais e internacionais, incluindo a Libertadores e o Mundial de Clubes.
+  <section class="container text-center mt-5">
+    <h1>História do Corinthians</h1>
+    <p class="lead mt-4">
+      Fundado em 1º de setembro de 1910, o Sport Club Corinthians Paulista é um dos clubes mais populares e vitoriosos do Brasil. 
+      Com uma torcida apaixonada, o Timão conquistou títulos nacionais e internacionais, incluindo a Libertadores e o Mundial de Clubes.
     </p>
   </section>
 
-  <!-- Cards de Informações -->
-  <section class="container py-5">
-    <h2 class="text-center mb-4">Informações</h2>
-    <div class="row g-4">
+  <!-- Cards -->
+  <section class="container text-center">
+    <h2>Informações</h2>
+    <div class="row mt-4 g-4">
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card p-4">
           <h5>Estádio</h5>
           <p>Arena Corinthians, localizada em Itaquera, São Paulo.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card p-4">
           <h5>Títulos</h5>
           <p>Brasileirão, Copa do Brasil, Libertadores, Mundial de Clubes e mais.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card p-4">
           <h5>Ídolos</h5>
           <p>Sócrates, Marcelinho Carioca, Rivelino, Cássio, entre outros.</p>
         </div>
@@ -77,26 +159,26 @@
   </section>
 
   <!-- Galeria -->
-  <section class="container py-5">
-    <h2 class="text-center mb-4">Galeria</h2>
-    <div class="row gallery g-3">
-      <div class="col-md-4"><img src="images/estadio.jfif" alt="Neo Quimica Arena"></div>
-      <div class="col-md-4"><img src="images/titulo.jpg" alt="Titulos"></div>
-      <div class="col-md-4"><img src="images/idolos.webp" alt="Idolos"></div>
+  <section class="container text-center">
+    <h2>Galeria</h2>
+    <div class="row mt-4 gallery g-4">
+      <div class="col-md-4"><img src="images/estadio.jfif" alt="Neo Química Arena"></div>
+      <div class="col-md-4"><img src="images/titulo.jpg" alt="Títulos do Corinthians"></div>
+      <div class="col-md-4"><img src="images/idolos.webp" alt="Ídolos do Corinthians"></div>
     </div>
   </section>
 
-  <!-- Mídia / Vídeo -->
-  <section class="container py-5">
-    <h2 class="text-center mb-4">Vídeo</h2>
-    <div class="ratio ratio-16x9">
+  <!-- Vídeo -->
+  <section class="container text-center">
+    <h2>Vídeo</h2>
+    <div class="ratio ratio-16x9 mt-4">
       <iframe src="https://www.youtube.com/embed/1zLZzZzZzZ0" title="Corinthians" allowfullscreen></iframe>
     </div>
   </section>
 
   <!-- Rodapé -->
-  <footer class="text-center py-4 mt-5">
-    <p>&copy; 2025 Sport Club Corinthians Paulista 1910</p>
+  <footer class="text-center mt-5">
+    <p>&copy; 2025 Sport Club Corinthians Paulista - Todos os direitos reservados</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
