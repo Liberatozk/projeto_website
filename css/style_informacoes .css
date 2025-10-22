@@ -1,0 +1,89 @@
+.body {
+            background-color: #000000;
+            color: #f5ecec;
+            font-family: 'Poppins', sans-serif;
+        }
+ 
+        .navbar {
+            background-color: #000;
+            border-bottom: 2px solid #fff;
+        }
+ 
+        .navbar-brand {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+        }
+ 
+        .navbar-brand img {
+            height: 40px;
+        }
+ 
+        .nav-link {
+            color: #f5f5f5 !important;
+            transition: color 0.3s;
+        }
+ 
+        .nav-link:hover {
+            color: #ff0000 !important;
+            text-shadow: 0 0 10px #ff0000;
+        }
+ 
+        .h1,h2 {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #d8d6d6;
+            text-shadow: 0 0 10px #fff;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+ 
+        .section {
+            padding: 80px 0;
+        }
+ 
+        .card {
+            background-color: #111;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            transition: 0.3s;
+            color: #ffffff;
+        }
+ 
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px #fff;
+        }
+ 
+        .card h5 {
+            text-shadow: 0 0 5px #fcfcfc;
+            text-transform: uppercase;
+            border-bottom: 1px solid #636363;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+ 
+        .table {
+            color: #ffffff;
+            border: 1px solid #444;
+        }
+ 
+        .table th {
+            background-color: #111;
+            text-shadow: 0 0 5px #000000;
+        }
+ 
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #000000;
+        }
+ 
+        .footer {
+            background-color: #111;
+            border-top: 2px solid #fff;
+            padding: 20px 0;
+            color: #ffffff;
+        }
