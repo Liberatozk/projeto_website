@@ -2,11 +2,17 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Corinthians - Mais Informações</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="css/style_informacoes.css">
 </head>
 
@@ -14,10 +20,11 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand text-white" href="index.html">
-        <img src="images/cori.png" alt="Escudo Corinthians"> Corinthians
+      <a class="navbar-brand text-white d-flex align-items-center" href="index.html">
+        <img src="images/cori.png" alt="Escudo do Corinthians" />
+        <span>Corinthians</span>
       </a>
-      <button class="navbar-toggler text-white border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -30,11 +37,11 @@
   </nav>
 
   <!-- Elenco Atual -->
-  <section class="container text-center">
+  <section class="container text-center mt-5 pt-5">
     <h1>Elenco Atual</h1>
     <div class="table-responsive mt-4">
-      <table class="table table-dark table-bordered table-hover">
-        <thead>
+      <table class="table table-dark table-bordered table-hover align-middle">
+        <thead class="table-light text-dark">
           <tr>
             <th>Jogador</th>
             <th>Posição</th>
@@ -51,62 +58,156 @@
         </tbody>
       </table>
     </div>
+
+    <!-- Novo Carrossel do Elenco -->
+    <div id="carouselElenco" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner rounded shadow-lg">
+        <div class="carousel-item active">
+          <img src="images/jogadores/hugo.webp" class="d-block w-100 jogador-img" alt="Hugo Souza">
+          <div class="carousel-caption">
+            <h5>Hugo Souza</h5>
+            <p>Goleiro — Reflexos e segurança</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/jogadores/matheuzinho.webp" class="d-block w-100 jogador-img" alt="Matheuzinho">
+          <div class="carousel-caption">
+            <h5>Matheuzinho</h5>
+            <p>Lateral Direito — Velocidade e apoio ao ataque</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/jogadores/gustavo_henrique.webp" class="d-block w-100 jogador-img" alt="Gustavo Henrique">
+          <div class="carousel-caption">
+            <h5>Gustavo Henrique</h5>
+            <p>Zagueiro — Força e imposição aérea</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/jogadores/garro.webp" class="d-block w-100 jogador-img" alt="Rodrigo Garro">
+          <div class="carousel-caption">
+            <h5>Rodrigo Garro</h5>
+            <p>Meia — Criação e precisão</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/jogadores/yuri_alberto.webp" class="d-block w-100 jogador-img" alt="Yuri Alberto">
+          <div class="carousel-caption">
+            <h5>Yuri Alberto</h5>
+            <p>Atacante — Farol de gols do Timão</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselElenco" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselElenco" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
   </section>
 
-  <!-- Títulos Recentes -->
-  <section class="container text-center">
-    <h2>Títulos Recentes</h2>
-    <div class="row mt-4 g-4">
-      <div class="col-md-4">
-        <div class="card p-4">
-          <h5>Paulista 2025</h5>
-          <p>Última conquista estadual recente.</p>
-          <img src="images/paulista2025.webp" alt="" class="img-fluid rounded">
+  <!-- Carrossel de Títulos -->
+  <section class="container mt-5 text-center">
+    <h2>Títulos e Conquistas</h2>
+    <div id="carouselTítulos" class="carousel slide mt-4" data-bs-ride="carousel">
+      <div class="carousel-inner rounded shadow-lg">
+        <div class="carousel-item active">
+          <img src="images/Paulista.jpg" class="d-block w-100 rounded" alt="Paulista 2025">
+          <div class="carousel-caption">
+            <h5>Paulista 2025</h5>
+            <p>Última conquista estadual recente.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/Brasileirao.jpg" class="d-block w-100 rounded" alt="Brasileirão 2017">
+          <div class="carousel-caption">
+            <h5>Brasileirão 2017</h5>
+            <p>Campeão nacional com grande campanha.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/Mundial.webp" class="d-block w-100 rounded" alt="Mundial 2012">
+          <div class="carousel-caption">
+            <h5>Libertadores & Mundial 2012</h5>
+            <p>Conquistas épicas que marcaram a história do Timão.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-4">
-          <h5>Brasileirão 2017</h5>
-          <p>Campeão nacional com grande campanha.</p>
-          <img src="images/campeao2017.jpg" alt="" class="img-fluid rounded">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-4">
-          <h5>Libertadores & Mundial</h5>
-          <p>Conquistas épicas de 2012.</p>
-          <img src="images/mundial2012sccp.webp" alt="" class="img-fluid rounded">
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselTítulos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselTítulos" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </section>
 
   <!-- Curiosidades -->
-  <section class="container text-center">
+  <section class="container text-center mt-5 mb-5">
     <h2>Curiosidades</h2>
     <div class="row mt-4 g-4">
       <div class="col-md-6">
-        <div class="card p-4">
+        <div class="card p-4 h-100">
           <h5>Maior Rivalidade</h5>
-          <p>Dérbi Paulista contra o Palmeiras é um dos maiores clássicos do Brasil.</p>
-          <img src="images/edilson.jpg" alt="" class="img-fluid rounded">
+          <p>O Dérbi Paulista contra o Palmeiras é um dos maiores clássicos do mundo.</p>
+          <img src="images/Briga.webp" alt="Dérbi Paulista" class="img-fluid rounded" />
         </div>
       </div>
       <div class="col-md-6">
-        <div class="card p-4">
+        <div class="card p-4 h-100">
           <h5>Torcida Fiel</h5>
-          <p>Uma das maiores torcidas do mundo, símbolo de amor e lealdade.</p>
-          <img src="images/gavioessc.webp" alt="" class="img-fluid rounded">
+          <p>Uma das torcidas mais apaixonadas do planeta, sinônimo de amor e lealdade.</p>
+          <img src="images/Torcisa 10.webp" alt="Torcida Fiel" class="img-fluid rounded" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Carrossel da Fiel -->
+  <section class="container mt-5 text-center mb-5">
+    <h2>A Fiel em Ação</h2>
+    <div id="carouselFiel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3500">
+      <div class="carousel-inner rounded shadow-lg">
+        <div class="carousel-item active">
+          <img src="images/Torcisa 10.webp" class="d-block w-100 rounded" alt="Torcida 1">
+          <div class="carousel-caption"><h5>Festa na Arena</h5></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/Briga.webp" class="d-block w-100 rounded" alt="Torcida 2">
+          <div class="carousel-caption"><h5>Clássico Emocionante</h5></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/Mundial.webp" class="d-block w-100 rounded" alt="Torcida 3">
+          <div class="carousel-caption"><h5>Mundial 2012 — A Glória</h5></div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFiel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselFiel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
   <!-- Rodapé -->
-  <footer class="text-center mt-5">
+  <footer>
     <p>&copy; 2025 Sport Club Corinthians Paulista - Todos os direitos reservados</p>
   </footer>
 
+  <!-- Botão Voltar ao Topo -->
+  <button id="btn-topo" title="Voltar ao topo">↑</button>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btnTopo = document.getElementById("btn-topo");
+    window.onscroll = () => {
+      btnTopo.style.display = (window.scrollY > 200) ? "block" : "none";
+    };
+    btnTopo.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
 </body>
+
 </html>
