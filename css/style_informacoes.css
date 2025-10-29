@@ -1,17 +1,20 @@
-/* 🔥 CARROSSEIS APRIMORADOS — TAMANHOS E DESTAQUE DAS IMAGENS */
+/* =========================================================
+🔥 CARROSSEIS APRIMORADOS — TAMANHOS E DESTAQUE DAS IMAGENS
+========================================================= */
 
-/* Estrutura geral dos carrosséis */
+/* ========== Estrutura geral ========== */
 .carousel {
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 0 25px rgba(225, 6, 0, 0.6), 0 0 60px rgba(255, 59, 59, 0.3);
   margin-bottom: 3rem;
+  box-shadow: 0 0 25px rgba(225, 6, 0, 0.6),
+              0 0 60px rgba(255, 59, 59, 0.3);
 }
 
-/* Imagens dos carrosséis */
+/* ========== Imagens do carrossel ========== */
 .carousel img {
   width: 100%;
-  height: 70vh; /* altura padrão das imagens grandes */
+  height: 70vh;
   object-fit: cover;
   border-radius: 12px;
   filter: brightness(80%) contrast(120%) saturate(125%);
@@ -22,15 +25,22 @@
 .carousel img:hover {
   transform: scale(1.05);
   filter: brightness(100%) contrast(130%) saturate(150%);
-  box-shadow: 0 0 25px #E10600, 0 0 50px #FF3B3B, 0 0 80px #E10600;
+  box-shadow: 0 0 25px #E10600,
+              0 0 50px #FF3B3B,
+              0 0 80px #E10600;
 }
+
+/* =========================================================
+🎭 VARIAÇÕES DE CARROSSEL
+========================================================= */
 
 /* Carrossel de elenco */
 #carouselElenco {
   position: relative;
   border: 2px solid #E10600;
-  box-shadow: 0 0 25px #E10600, 0 0 50px #FF3B3B;
   animation: borderPulse 4s ease-in-out infinite;
+  box-shadow: 0 0 25px #E10600,
+              0 0 50px #FF3B3B;
 }
 
 #carouselElenco img {
@@ -38,7 +48,15 @@
 }
 
 /* Carrossel de títulos */
-#carouselTitulos img {
+#carouselTítulos {
+  position: relative;
+  border: 2px solid #E10600;
+  animation: borderPulse 4s ease-in-out infinite;
+  box-shadow: 0 0 25px #E10600,
+              0 0 50px #FF3B3B;
+}
+
+#carouselTítulos img {
   height: 65vh;
   box-shadow: 0 0 25px rgba(225, 6, 0, 0.6);
 }
@@ -49,24 +67,33 @@
   box-shadow: 0 0 20px rgba(225, 6, 0, 0.5);
 }
 
+/* =========================================================
+✨ EFEITOS E ANIMAÇÕES
+========================================================= */
+
 /* Efeito neon pulsante nas bordas */
 @keyframes borderPulse {
   0%, 100% {
-    box-shadow: 0 0 15px #E10600, 0 0 35px #FF3B3B;
+    box-shadow: 0 0 15px #E10600,
+                0 0 35px #FF3B3B;
   }
   50% {
-    box-shadow: 0 0 30px #FF3B3B, 0 0 70px #E10600;
+    box-shadow: 0 0 30px #FF3B3B,
+                0 0 70px #E10600;
   }
 }
 
-/* Legendas estilizadas com brilho */
+/* =========================================================
+💬 LEGENDAS ESTILIZADAS
+========================================================= */
 .carousel-caption {
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
   border-radius: 14px;
   padding: 20px;
   color: #fff;
-  text-shadow: 0 0 8px #E10600, 0 0 20px #FF3B3B;
+  text-shadow: 0 0 8px #E10600,
+               0 0 20px #FF3B3B;
   animation: captionGlow 3s ease-in-out infinite alternate;
 }
 
@@ -85,33 +112,45 @@
 /* Animação de brilho das legendas */
 @keyframes captionGlow {
   from {
-    text-shadow: 0 0 8px #E10600, 0 0 20px #FF3B3B;
+    text-shadow: 0 0 8px #E10600,
+                 0 0 20px #FF3B3B;
   }
   to {
-    text-shadow: 0 0 20px #FF3B3B, 0 0 40px #E10600;
+    text-shadow: 0 0 20px #FF3B3B,
+                 0 0 40px #E10600;
   }
 }
 
-/* Botões de navegação com neon */
+/* =========================================================
+🎮 CONTROLES E INDICADORES
+========================================================= */
+
+/* Botões de navegação */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: drop-shadow(0 0 10px #E10600) drop-shadow(0 0 20px #FF3B3B);
   width: 55px;
   height: 55px;
+  filter: drop-shadow(0 0 10px #E10600)
+          drop-shadow(0 0 20px #FF3B3B);
 }
 
-/* Indicadores do carrossel (bolinhas) */
+/* Indicadores (bolinhas) */
 .carousel-indicators [data-bs-target] {
   background-color: #E10600;
-  box-shadow: 0 0 10px #E10600, 0 0 20px #FF3B3B;
+  box-shadow: 0 0 10px #E10600,
+              0 0 20px #FF3B3B;
 }
 
 .carousel-indicators .active {
   background-color: #FF3B3B;
-  box-shadow: 0 0 20px #FF3B3B, 0 0 40px #E10600;
+  box-shadow: 0 0 20px #FF3B3B,
+              0 0 40px #E10600;
 }
 
-/* Responsividade */
+/* =========================================================
+📱 RESPONSIVIDADE
+========================================================= */
+
 @media (max-width: 992px) {
   .carousel img {
     height: 55vh;
@@ -143,4 +182,3 @@
     font-size: 0.9rem;
   }
 }
-
